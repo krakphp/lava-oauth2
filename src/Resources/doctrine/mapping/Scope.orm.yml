@@ -1,0 +1,13 @@
+Krak\LavaOAuth2\Model\Scope:
+    type: entity
+    table: oauth2_scopes
+    id:
+        id:
+            type: string
+    fields:
+        name:
+            type: string
+        description:
+            type: text
+        created_at:
+            type: datetime

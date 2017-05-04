@@ -1,0 +1,17 @@
+Krak\LavaOAuth2\Model\RefreshToken:
+    type: entity
+    table: oauth2_refresh_tokens
+    id:
+        id:
+            type: string
+    fields:
+        expiry_date_time:
+            type: datetime
+        is_revoked:
+            type: boolean
+        created_at:
+            type: datetime
+    oneToOne:
+        access_token:
+            targetEntity: Krak\LavaOAuth2\Model\AccessToken
+            joinColumn: { name: access_token_id }

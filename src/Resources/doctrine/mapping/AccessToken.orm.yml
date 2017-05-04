@@ -1,0 +1,31 @@
+Krak\LavaOAuth2\Model\AccessToken:
+    type: entity
+    table: oauth2_access_tokens
+    id:
+        id:
+            type: string
+    fields:
+        expiry_date_time:
+            type: datetime
+        user_id:
+            type: string
+            nullable: true
+        is_revoked:
+            type: boolean
+        created_at:
+            type: datetime
+    manyToOne:
+        client:
+            targetEntity: Krak\LavaOAuth2\Model\Client
+            joinColumn: { name: client_id }
+    manyToMany:
+        scopes:
+            targetEntity: Krak\LavaOAuth2\Model\Scope
+            joinTable:
+                name: oauth2_access_tokens_scopes
+                joinColumns:
+                    access_token_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    scope_id:
+                        referencedColumnName: id

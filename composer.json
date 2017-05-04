@@ -1,0 +1,30 @@
+{
+    "name": "krak/lava-oauth2",
+    "description": "Lava OAuth2 Integration",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "oauth2",
+        "lava",
+        "psr-7"
+    ],
+    "authors": [
+        {
+            "name": "RJ Garcia",
+            "email": "rj@bighead.net"
+        }
+    ],
+    "require": {
+        "doctrine/migrations": "^1.5",
+        "doctrine/orm": "^2.5",
+        "league/oauth2-server": "^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Krak\\LavaOAuth2\\": "src"
+        }
+    },
+    "require-dev": {
+        "krak/lava": "^0.3.3"
+    }
+}

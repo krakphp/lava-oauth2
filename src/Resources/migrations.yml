@@ -1,0 +1,4 @@
+name: Krak LavaOAuth2 Doctrine Migrations
+migrations_namespace: Krak\LavaOAuth2\DoctrineMigrations
+table_name: oauth2_doctrine_migrations
+migrations_directory: ../DoctrineMigrations

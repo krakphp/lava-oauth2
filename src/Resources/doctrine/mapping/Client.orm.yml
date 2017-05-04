@@ -1,0 +1,26 @@
+Krak\LavaOAuth2\Model\Client:
+    type: entity
+    table: oauth2_clients
+    id:
+        id:
+            type: string
+    fields:
+        secret:
+            type: string
+        name:
+            type: string
+        redirect_uri:
+            type: string
+        created_at:
+            type: datetime
+    manyToMany:
+        scopes:
+            targetEntity: Krak\LavaOAuth2\Model\Scope
+            joinTable:
+                name: oauth2_clients_scopes
+                joinColumns:
+                    client_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    scope_id:
+                        referencedColumnName: id
